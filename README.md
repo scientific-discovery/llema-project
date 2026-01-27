@@ -1,4 +1,4 @@
-# LLEMA - LLM-guided Evolution for MAterials Design (ICLR 2026)
+# LLEMA: Accelerating Materials Design via LLM-Guided Evolutionary Search (ICLR 2026)
 
 ## About
 
