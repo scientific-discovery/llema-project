@@ -314,24 +314,29 @@
 <!-- End image carousel -->
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">Method Overview</h2>
+    <div class="text-center">
+      <!-- LLEMA framework main figure -->
+      <div style="background: #f3f4f6; border: 2px dashed #9ca3af; border-radius: 10px; padding: 60px 20px; margin: 2rem auto; max-width: 900px;">
+        <img src="static/images/main_fig.jpg" alt="LLEMA Framework Diagram" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
+        <p style="margin-top: 1rem; color: #6b7280; font-size: 1.1rem;">LLEMA framework overview diagram</p>
+        <p style="color: #9ca3af; font-size: 0.9rem;">Recommended: PNG or JPG, ~1920px width</p>
       </div>
+    </div>
+    <div class="mt-5">
+      <h3 class="text-center mb-4" style="font-size: 1.8rem; font-weight: 600;">Key Features</h3>
+      <ul class="features-list">
+        <li><strong>LLM-Guided Generation:</strong> Leverages scientific knowledge embedded in large language models to propose chemically plausible material candidates</li>
+        <li><strong>Chemistry-Informed Rules:</strong> Integrates domain-specific evolutionary operators for compositional substitution and crystal structure manipulation</li>
+        <li><strong>Memory-Based Refinement:</strong> Maintains reward and error buffers to guide exploration and exploitation across generations</li>
+        <li><strong>Multi-Objective Optimization:</strong> Balances multiple property constraints including thermodynamic stability and synthesizability</li>
+        <li><strong>Island-Based Evolution:</strong> Manages independent evolution across multiple islands for diverse candidate exploration</li>
+      </ul>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
 
 <!-- Video carousel -->
