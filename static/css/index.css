@@ -344,7 +344,7 @@ body {
 
 .key-feature-item {
   background: var(--background-primary);
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid #232F3E;
   border-radius: var(--border-radius);
   padding: 1.5rem 2rem;
   margin-bottom: 1rem;
@@ -361,7 +361,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: #232F3E;
   margin-bottom: 0.75rem;
   line-height: 1.3;
 }

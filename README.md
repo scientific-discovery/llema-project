@@ -1,77 +1,29 @@
-# Academic Project Page Template
+# LLEMA - LLM-guided Evolution for MAterials Design (ICLR 2026)
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+## About
 
-A clean, responsive template for academic project pages.
+LLEMA is a unified framework that accelerates materials discovery by coupling the scientific knowledge embedded in large language models with chemistry-informed evolutionary rules and memory-based refinement. 
 
+## Key Features
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+- **LLM-Guided Generation:** Leverages scientific knowledge in LLMs to propose chemically plausible material candidates
+- **Chemistry-Informed Evolution:** Integrates domain-specific operators for compositional substitution and crystal structure manipulation
+- **Memory-Based Refinement:** Maintains reward and error buffers to guide exploration across generations
+- **Multi-Objective Optimization:** Balances multiple property constraints including thermodynamic stability and synthesizability
+- **Validated on 14 Tasks:** Spanning electronics, energy, coatings, optics, and aerospace applications
 
+## Results
 
+LLEMA discovers materials that are:
+- ✅ Chemically plausible and thermodynamically stable
+- ✅ Property-aligned with target specifications
+- ✅ Synthesizable for experimental realization
+- ✅ Superior to generative and LLM-only baselines in hit-rates and Pareto fronts
 
-## Start using the template
-To start using the template click on `Use this Template`.
+## Links
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
-
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
-
-## What's New
-
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
-
-## Components
-
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
-
-## Customization
-
-The HTML file has TODO comments showing what to replace:
-
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
-
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
-
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
-
-## Tips
-
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
+- 📄 [Paper (arXiv)](https://arxiv.org/abs/2510.22503)
+- 💻 [Code (GitHub)](https://github.com/scientific-discovery/LLEMA)
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
