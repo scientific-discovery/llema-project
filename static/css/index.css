@@ -90,7 +90,7 @@ body {
 /* Hero Section Modernization */
 .hero {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero.is-light {
@@ -496,6 +496,46 @@ code {
 
 .copy-bibtex-btn.copied .copy-text::after {
   content: "ied!";
+}
+
+/* Header Logos */
+.header-logos {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.header-logo-left {
+  pointer-events: auto;
+}
+
+.header-logo-right {
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .header-logos {
+    padding: 0 1rem;
+    top: 1rem;
+  }
+  
+  .header-logo-left img,
+  .header-logo-right img {
+    height: 30px !important;
+  }
+  
+  .header-logo-right img {
+    margin-right: 0.5rem !important;
+  }
 }
 
 /* Scroll to Top Button */
