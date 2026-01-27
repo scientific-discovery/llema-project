@@ -312,61 +312,95 @@
 </section>
 <!-- End Method Overview -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+<!-- Materials Discovery Tasks -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Materials Discovery Tasks</h2>
+        <div style="margin: 2rem 0;">
+          <img src="static/images/tasks.jpg" alt="Materials Discovery Tasks" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);"/>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End Materials Discovery Tasks -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<!-- Qualitative Results -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <!-- Content to be added -->
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
+<!-- End Qualitative Results -->
 
-
+<!-- Quantitative Results -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Quantitative Results</h2>
+        
+        <!-- Main Results Image -->
+        <div style="margin: 2rem 0;">
+          <img src="static/images/results.png" alt="Quantitative Results" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);"/>
+        </div>
+        
+        <!-- Additional Results Images in Boxes -->
+        <div class="results-images-grid" style="margin-top: 3rem;">
+          <!-- Square boxes row 1 -->
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <div class="result-image-box square">
+                <h3 class="result-image-header">Ablation Study</h3>
+                <img src="static/images/ablation.jpg" alt="Ablation Study" style="width: 100%; height: auto; border-radius: var(--border-radius);"/>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="result-image-box square">
+                <h3 class="result-image-header">Distribution Analysis</h3>
+                <img src="static/images/distribution.png" alt="Distribution Analysis" style="width: 100%; height: auto; border-radius: var(--border-radius);"/>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Rectangular box - Comparison Plots -->
+          <div class="columns" style="margin-top: 1.5rem;">
+            <div class="column is-full">
+              <div class="result-image-box rectangular">
+                <h3 class="result-image-header">Comparison Plots</h3>
+                <img src="static/images/comparison_plots.png" alt="Comparison Plots" style="width: 100%; height: auto; border-radius: var(--border-radius);"/>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Square boxes row 2 -->
+          <div class="columns is-multiline" style="margin-top: 1.5rem;">
+            <div class="column is-half">
+              <div class="result-image-box square">
+                <h3 class="result-image-header">Memory Analysis</h3>
+                <img src="static/images/memory.png" alt="Memory Analysis" style="width: 100%; height: auto; border-radius: var(--border-radius);"/>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="result-image-box square">
+                <h3 class="result-image-header">Memory Figure</h3>
+                <img src="static/images/memory_fig.jpg" alt="Memory Figure" style="width: 100%; height: auto; border-radius: var(--border-radius);"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Quantitative Results -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
