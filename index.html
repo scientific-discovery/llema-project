@@ -199,7 +199,7 @@
           <div class="is-size-5 publication-authors">
             <!-- Institutions with superscripts -->
             <span class="author-block"><sup class="smaller-superscript" style="font-size:0.6em">1</sup>Virginia Tech</span>
-            <span class="author-block"><sup class="smaller-superscript" style="font-size:0.6em">2</sup>Center of Integrated Nanotechnologies, Sandia National Laboratories</span>
+            <span class="author-block"><sup class="smaller-superscript" style="font-size:0.6em">2</sup>Sandia National Laboratories</span>
             <br><span style="font-size:1.2em;"><strong>ICLR 2026</strong></span>
             <!-- TODO: Remove this line if no equal contribution -->
             <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
@@ -268,23 +268,23 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3">Materials Discovery Tasks</h2>
-        <div style="margin: 2rem 0; padding: 1rem 2.5rem;">
-          <img src="static/images/tasks.jpg" alt="Materials Discovery Tasks" style="max-width: 98%; height: auto; display: block; margin: 0 auto; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);"/>
+        <h2 class="title is-3">Novel Materials Discovery Benchmark</h2>
+        <div style="margin: 2rem 0; padding: 3rem 5rem;">
+          <img src="static/images/tasks.jpg" alt="Materials Discovery Benchmark" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);"/>
         </div>
         
         <!-- Description -->
         <div class="columns is-centered" style="margin-top: 2rem;">
           <div class="column is-four-fifths">
             <div class="content has-text-justified">
-              <p>LLEMA was evaluated on <strong>14 realistic materials discovery tasks</strong> spanning diverse applications across 
+              <p>We introduce a <strong>new benchmark for multi-objective materials discovery</strong>, evaluating LLEMA on <strong>14 comprehensive materials discovery tasks</strong> spanning diverse industrial applications across 
                 <strong>electronics</strong> (semiconductors, transparent conductors, thermoelectric materials), 
                 <strong>energy</strong> (battery electrodes, photovoltaics, fuel cell components), 
                 <strong>coatings</strong> (corrosion-resistant alloys, wear-resistant ceramics), 
                 <strong>optics</strong> (high-refractive materials, optical filters), and 
                 <strong>aerospace</strong> (high-temperature alloys, lightweight structural materials). 
                 Each task requires optimizing multiple competing objectives while maintaining chemical plausibility, 
-                thermodynamic stability, and synthesizability constraints.</p>
+                thermodynamic stability, and synthesizability constraints. This benchmark provides a standardized evaluation framework for future materials discovery methods.</p>
             </div>
           </div>
         </div>
@@ -300,9 +300,17 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified" style="max-width: 900px; margin: 0 auto 2rem auto;">
+          <p>
+            LLEMA is formulated as an <strong>agentic AI system for materials discovery</strong>, consisting of four interconnected components that interact in a closed-loop optimization process. Central to the system is a large language model that operates as an autonomous hypothesis-generation agent, proposing candidate materials at each iteration. Its behavior is governed by dynamically constructed prompts that encode task objectives, chemistry-informed design constraints, demonstrations from prior system trajectories, and structured output specifications, enabling systematic and adaptive exploration of the materials design space.
+          </p>
+        </div>
         <!-- LLEMA framework main figure -->
-        <div style="margin: 2rem 0; padding: 2.5rem;">
-          <img src="static/images/main_fig.jpg" alt="LLEMA Framework Diagram" style="max-width: 98%; height: auto; display: block; margin: 0 auto; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);"/>
+        <div style="margin: 2rem 0; padding: 4rem 5rem;">
+          <img src="static/images/main_fig.jpg" alt="LLEMA Framework Diagram" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg);"/>
+          <div style="text-align:center; margin-top: 1rem; color: var(--text-secondary); font-size: 1.05rem;">
+            <em>Figure: Overview of the LLEMA framework. An LLM proposes material candidates under task constraints, which are then evaluated and refined using chemistry-informed rules, memory-based guidance, and surrogate property prediction. The iterative process balances exploration and exploitation, enhancing multi-objective materials discovery.</em>
+          </div>
         </div>
         
         <!-- Key Features -->
