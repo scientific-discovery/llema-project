@@ -44,19 +44,31 @@ function scrollToTop() {
     });
 }
 
-// Toggle dropdown menu
-function toggleDropdown() {
-    const dropdown = document.getElementById('more-works-dropdown');
-    dropdown.classList.toggle('is-active');
+// Toggle More Works dropdown menu
+function toggleMoreWorks() {
+    const dropdown = document.getElementById('moreWorksDropdown');
+    const button = document.querySelector('.more-works-btn');
+    const arrow = document.querySelector('.dropdown-arrow');
+    
+    if (dropdown) {
+        dropdown.classList.toggle('active');
+        if (arrow) {
+            arrow.style.transform = dropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+    }
 }
 
 // Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
-    const dropdown = document.getElementById('more-works-dropdown');
-    const button = document.querySelector('.more-works-btn');
+    const container = document.querySelector('.more-works-container');
+    const dropdown = document.getElementById('moreWorksDropdown');
     
-    if (dropdown && !dropdown.contains(event.target)) {
-        dropdown.classList.remove('is-active');
+    if (container && dropdown && !container.contains(event.target)) {
+        dropdown.classList.remove('active');
+        const arrow = document.querySelector('.dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(0deg)';
+        }
     }
 });
 

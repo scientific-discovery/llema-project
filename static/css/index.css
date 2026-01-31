@@ -546,6 +546,7 @@ code {
   flex-direction: column;
   align-items: flex-end;
   pointer-events: auto;
+  position: relative;
 }
 
 .header-logos-container {
@@ -555,7 +556,7 @@ code {
 }
 
 /* More Works Dropdown */
-.more-works-dropdown {
+.more-works-container {
   position: relative;
   z-index: 1000;
   pointer-events: auto;
@@ -574,6 +575,8 @@ code {
   display: flex !important;
   align-items: center !important;
   gap: 0.5rem !important;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
 }
 
 .more-works-btn:hover {
@@ -581,37 +584,32 @@ code {
   box-shadow: var(--shadow-md) !important;
 }
 
-.more-works-btn .icon {
-  transition: var(--transition);
-}
-
-.more-works-btn .icon:first-child {
+.more-works-btn i.fa-flask {
   color: var(--primary-color);
 }
 
-.dropdown.is-active .more-works-btn .icon:last-child i {
-  transform: rotate(180deg);
+.more-works-btn .dropdown-arrow {
+  transition: var(--transition);
+  font-size: 0.8rem;
 }
 
-.dropdown-menu {
+.more-works-dropdown {
   display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
   min-width: 400px;
   max-width: 500px;
-  margin-top: 0.5rem;
   background: var(--background-primary) !important;
   border: 1px solid var(--border-color) !important;
   border-radius: var(--border-radius-lg) !important;
   box-shadow: var(--shadow-xl) !important;
-  padding: 0 !important;
   overflow: hidden;
+  z-index: 1001;
 }
 
-.dropdown.is-active .dropdown-menu {
+.more-works-dropdown.active {
   display: block !important;
-}
-
-.dropdown-content {
-  padding: 0 !important;
 }
 
 .dropdown-header {
@@ -620,9 +618,10 @@ code {
   align-items: center;
   padding: 1rem 1.25rem;
   background: var(--background-primary);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.dropdown-header-title {
+.dropdown-header h4 {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -630,7 +629,7 @@ code {
   font-family: 'Inter', sans-serif;
 }
 
-.dropdown-close-btn {
+.dropdown-header .close-btn {
   background: none;
   border: none;
   color: var(--text-secondary);
@@ -645,78 +644,75 @@ code {
   height: 24px;
 }
 
-.dropdown-close-btn:hover {
+.dropdown-header .close-btn:hover {
   background: var(--background-accent);
   color: var(--text-primary);
 }
 
-.dropdown-divider {
-  margin: 0 !important;
-  background-color: var(--border-color) !important;
-  height: 1px;
+.works-list {
+  max-height: 500px;
+  overflow-y: auto;
 }
 
-.dropdown-item-detailed {
-  display: block;
+.work-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   padding: 1rem 1.25rem;
   color: var(--text-primary) !important;
   text-decoration: none !important;
   transition: var(--transition);
   border-bottom: 1px solid var(--border-color);
+  gap: 1rem;
 }
 
-.dropdown-item-detailed:last-child {
+.work-item:last-child {
   border-bottom: none;
 }
 
-.dropdown-item-detailed:hover {
+.work-item:hover {
   background: var(--background-accent) !important;
 }
 
-.dropdown-item-content {
+.work-info {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.dropdown-item-title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.dropdown-item-title {
+.work-info h5 {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.4;
-  flex: 1;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-.dropdown-external-icon {
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-}
-
-.dropdown-item-detailed:hover .dropdown-external-icon {
-  color: var(--primary-color);
-}
-
-.dropdown-item-description {
+.work-info p {
   font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.5;
   margin: 0;
 }
 
-.dropdown-item-venue {
+.work-venue {
   font-size: 0.8rem;
   color: var(--text-secondary);
-  margin: 0;
   font-style: italic;
+}
+
+.work-item i.fa-external-link-alt {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  transition: var(--transition);
+}
+
+.work-item:hover i.fa-external-link-alt {
+  color: var(--primary-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -743,7 +739,7 @@ code {
     font-size: 0.85rem !important;
   }
   
-  .dropdown-menu {
+  .more-works-dropdown {
     min-width: 300px;
     max-width: 90vw;
   }
@@ -752,15 +748,15 @@ code {
     padding: 0.75rem 1rem;
   }
   
-  .dropdown-item-detailed {
+  .work-item {
     padding: 0.75rem 1rem;
   }
   
-  .dropdown-item-title {
+  .work-info h5 {
     font-size: 0.9rem;
   }
   
-  .dropdown-item-description {
+  .work-info p {
     font-size: 0.8rem;
   }
 }

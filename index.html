@@ -209,59 +209,28 @@
           <img src="static/images/snl_horizontal_black_blue.png" alt="Sandia National Laboratories" style="height: 35px; width: auto;"/>
         </div>
         <!-- More Works Dropdown -->
-        <div class="more-works-dropdown">
-          <div class="dropdown is-right" id="more-works-dropdown">
-            <div class="dropdown-trigger">
-              <button class="button more-works-btn" aria-haspopup="true" aria-controls="more-works-menu" onclick="toggleDropdown()">
-                <span class="icon is-small">
-                  <i class="fas fa-flask" aria-hidden="true"></i>
-                </span>
-                <span>More Works</span>
-                <span class="icon is-small">
-                  <i class="fas fa-chevron-up" aria-hidden="true"></i>
-                </span>
+        <div class="more-works-container">
+          <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+            <i class="fas fa-flask"></i>
+            More Works
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </button>
+          <div class="more-works-dropdown" id="moreWorksDropdown">
+            <div class="dropdown-header">
+              <h4>More Works from Our Lab</h4>
+              <button class="close-btn" onclick="toggleMoreWorks()">
+                <i class="fas fa-times"></i>
               </button>
             </div>
-            <div class="dropdown-menu" id="more-works-menu" role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-header">
-                  <h3 class="dropdown-header-title">More Works from Our Lab</h3>
-                  <button class="dropdown-close-btn" onclick="toggleDropdown()" aria-label="Close menu">
-                    <i class="fas fa-times"></i>
-                  </button>
+            <div class="works-list">
+              <a href="https://scientific-discovery.github.io/llm-fe/" class="work-item" target="_blank">
+                <div class="work-info">
+                  <h5>LLM-FE: Automated Feature Engineering with Large Language Models</h5>
+                  <p>A framework that casts feature engineering as evolutionary program search, with LLMs generating and refining executable feature transformations.</p>
+                  <span class="work-venue">arXiv 2025</span>
                 </div>
-                <hr class="dropdown-divider">
-                <a href="https://nikhilsab.github.io/LLMFE" target="_blank" class="dropdown-item-detailed">
-                  <div class="dropdown-item-content">
-                    <div class="dropdown-item-title-row">
-                      <span class="dropdown-item-title">LLM-FE: Automated Feature Engineering with Large Language Models</span>
-                      <span class="icon dropdown-external-icon"><i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                    <p class="dropdown-item-description">A framework that casts feature engineering as evolutionary program search, with LLMs generating and refining executable feature transformations.</p>
-                    <p class="dropdown-item-venue">arXiv 2025</p>
-                  </div>
-                </a>
-                <a href="https://github.com/scientific-discovery/H-STAR" target="_blank" class="dropdown-item-detailed">
-                  <div class="dropdown-item-content">
-                    <div class="dropdown-item-title-row">
-                      <span class="dropdown-item-title">H-STAR: Hierarchical Scientific Table Analysis</span>
-                      <span class="icon dropdown-external-icon"><i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                    <p class="dropdown-item-description">Brief description of the work and its main contribution.</p>
-                    <p class="dropdown-item-venue">Conference/Journal 2024</p>
-                  </div>
-                </a>
-                <a href="https://github.com/scientific-discovery/RUST-Bench" target="_blank" class="dropdown-item-detailed">
-                  <div class="dropdown-item-content">
-                    <div class="dropdown-item-title-row">
-                      <span class="dropdown-item-title">RUST-Bench: Robustness Benchmark for Table Understanding</span>
-                      <span class="icon dropdown-external-icon"><i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                    <p class="dropdown-item-description">Brief description of the work and its main contribution.</p>
-                    <p class="dropdown-item-venue">Conference/Journal 2023</p>
-                  </div>
-                </a>
-              </div>
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
           </div>
         </div>
