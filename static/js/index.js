@@ -44,6 +44,22 @@ function scrollToTop() {
     });
 }
 
+// Toggle dropdown menu
+function toggleDropdown() {
+    const dropdown = document.getElementById('more-works-dropdown');
+    dropdown.classList.toggle('is-active');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('more-works-dropdown');
+    const button = document.querySelector('.more-works-btn');
+    
+    if (dropdown && !dropdown.contains(event.target)) {
+        dropdown.classList.remove('is-active');
+    }
+});
+
 // Show/hide scroll to top button
 window.addEventListener('scroll', function() {
     const scrollButton = document.querySelector('.scroll-to-top');

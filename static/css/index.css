@@ -543,8 +543,180 @@ code {
 
 .header-logo-right {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   pointer-events: auto;
+}
+
+.header-logos-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* More Works Dropdown */
+.more-works-dropdown {
+  position: relative;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.more-works-btn {
+  background: #f1f5f9 !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: var(--transition) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.more-works-btn:hover {
+  background: #e2e8f0 !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.more-works-btn .icon {
+  transition: var(--transition);
+}
+
+.more-works-btn .icon:first-child {
+  color: var(--primary-color);
+}
+
+.dropdown.is-active .more-works-btn .icon:last-child i {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  min-width: 400px;
+  max-width: 500px;
+  margin-top: 0.5rem;
+  background: var(--background-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--border-radius-lg) !important;
+  box-shadow: var(--shadow-xl) !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.dropdown.is-active .dropdown-menu {
+  display: block !important;
+}
+
+.dropdown-content {
+  padding: 0 !important;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: var(--background-primary);
+}
+
+.dropdown-header-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.dropdown-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: var(--transition);
+  width: 24px;
+  height: 24px;
+}
+
+.dropdown-close-btn:hover {
+  background: var(--background-accent);
+  color: var(--text-primary);
+}
+
+.dropdown-divider {
+  margin: 0 !important;
+  background-color: var(--border-color) !important;
+  height: 1px;
+}
+
+.dropdown-item-detailed {
+  display: block;
+  padding: 1rem 1.25rem;
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+  transition: var(--transition);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-item-detailed:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item-detailed:hover {
+  background: var(--background-accent) !important;
+}
+
+.dropdown-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdown-item-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.dropdown-item-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.dropdown-external-icon {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.dropdown-item-detailed:hover .dropdown-external-icon {
+  color: var(--primary-color);
+}
+
+.dropdown-item-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dropdown-item-venue {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-style: italic;
 }
 
 @media screen and (max-width: 768px) {
@@ -554,12 +726,42 @@ code {
   }
   
   .header-logo-left img,
-  .header-logo-right img {
+  .header-logos-container img {
     height: 30px !important;
   }
   
-  .header-logo-right img {
+  .header-logos-container img {
     margin-right: 0.5rem !important;
+  }
+  
+  .header-logos-container {
+    margin-bottom: 0.5rem;
+  }
+  
+  .more-works-btn {
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .dropdown-menu {
+    min-width: 300px;
+    max-width: 90vw;
+  }
+  
+  .dropdown-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .dropdown-item-detailed {
+    padding: 0.75rem 1rem;
+  }
+  
+  .dropdown-item-title {
+    font-size: 0.9rem;
+  }
+  
+  .dropdown-item-description {
+    font-size: 0.8rem;
   }
 }
 
