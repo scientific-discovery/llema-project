@@ -100,7 +100,7 @@ body {
 }
 
 .hero-body {
-  padding: 4rem 1.5rem;
+  padding: 6rem 1.5rem 4rem 1.5rem;
 }
 
 .teaser .hero-body {
@@ -531,7 +531,7 @@ code {
   right: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 2rem;
   z-index: 100;
   pointer-events: none;
@@ -539,20 +539,10 @@ code {
 
 .header-logo-left {
   pointer-events: auto;
-}
-
-.header-logo-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  pointer-events: auto;
-  position: relative;
-}
-
-.header-logos-container {
   display: flex;
   align-items: center;
-  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /* More Works Dropdown */
@@ -562,6 +552,7 @@ code {
   pointer-events: auto;
   display: block;
   visibility: visible;
+  margin-left: auto;
 }
 
 .more-works-btn {
@@ -723,19 +714,22 @@ code {
   .header-logos {
     padding: 0 1rem;
     top: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
   
-  .header-logo-left img,
-  .header-logos-container img {
+  .header-logo-left {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .header-logo-left img {
     height: 30px !important;
+    margin-left: 0 !important;
   }
   
-  .header-logos-container img {
-    margin-right: 0.5rem !important;
-  }
-  
-  .header-logos-container {
-    margin-bottom: 0.5rem;
+  .hero-body {
+    padding-top: 8rem !important;
   }
   
   .more-works-btn {
@@ -746,6 +740,7 @@ code {
   .more-works-dropdown {
     min-width: 300px;
     max-width: 90vw;
+    right: 0;
   }
   
   .dropdown-header {
